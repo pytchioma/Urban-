@@ -1,7 +1,7 @@
 # Urbané
 
 ## Live Demo
-urban-snowy.vercel.app
+https://urban-snowy.vercel.app
 
 ##Prewview
 <img width="1344" height="695" alt="Urbané" src="https://github.com/user-attachments/assets/4f5461ba-d7b4-4b65-aebe-b63333681f5c" />
