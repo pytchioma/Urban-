@@ -4,7 +4,8 @@
 urban-snowy.vercel.app
 
 ##Prewview
-<img width="1344" height="1402" alt="Urbané" src="https://github.com/user-attachments/assets/f3a9c6c2-720c-489b-b102-d1e3680d53ca" />
+<img width="1344" height="695" alt="Urbané" src="https://github.com/user-attachments/assets/4f5461ba-d7b4-4b65-aebe-b63333681f5c" />
+
 
 Urbané is a modern fashion landing page concept built with HTML and Tailwind CSS.
 
