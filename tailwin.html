@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbané — Timeless Elegance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #e9e2d7;
+        }
+        .gallery-card {
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2);
+        }
+        .hero-btn {
+            transition: all 0.3s ease;
+        }
+        .hero-btn:hover {
+            background-color: #2c2c2c;
+            transform: scale(1.02);
+            box-shadow: 0 15px 25px -8px rgba(0,0,0,0.2);
+        }
+        @keyframes fadeSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .section-fade {
+            animation: fadeSlideUp 0.6s ease-out forwards;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2d9cf;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b8a99a;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat p-4 md:p-6" style="background-image: linear-gradient(145deg, #dfd5c8 0%, #d6ccbf 100%);">
+    <!-- main card container: soft, rounded, elegant like meditation space image -->
+    <div class="w-full max-w-6xl bg-white/95 backdrop-blur-sm rounded-[2.5rem] shadow-2xl overflow-hidden my-8 md:my-12 transition-all duration-300 border border-white/30">
+        
+        <!-- HERO SECTION (First Section) with MAN IMAGE, brand story & SHOP NOW button -->
+        <div class="relative w-full">
+            <div class="flex flex-col lg:flex-row items-stretch">
+                <!-- LEFT CONTENT: Brand message + Shop Now button -->
+                <div class="lg:w-1/2 px-6 md:px-10 py-12 md:py-16 lg:py-20 flex flex-col justify-center bg-gradient-to-br from-[#F9F6F0] to-[#F3EDE4]">
+                    <div class="max-w-md mx-auto lg:mx-0">
+                        <span class="inline-block px-4 py-1.5 bg-black/5 rounded-full text-xs font-semibold tracking-wide text-stone-700 backdrop-blur-sm mb-5">✦ ETHICAL EDITION</span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-stone-800 leading-[1.2] mb-5">
+                            Urbané
+                            <span class="block text-stone-500 text-3xl md:text-4xl lg:text-5xl font-light mt-2">essence of character</span>
+                        </h1>
+                        <p class="text-stone-600 text-base md:text-lg leading-relaxed mb-8 border-l-4 border-stone-400 pl-5 italic font-light">
+                            Where effortless sophistication meets modern spirit. redefine your wardrobe with timeless silhouettes.
+                        </p>
+                        
+                        <!-- SHOP NOW BUTTON -->
+                        <div class="flex flex-col sm:flex-row gap-4 items-start">
+                            <button class="hero-btn bg-stone-800 text-white px-8 py-3.5 rounded-full font-semibold text-base shadow-md transition-all duration-300 flex items-center gap-2 group">
+                                Shop Now
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </button>
+                            <p class="text-stone-500 text-sm flex items-center gap-1 mt-2 sm:mt-0">
+                                <span class="text-lg">✨</span> Free shipping worldwide
+                            </p>
+                        </div>
+                        
+                        <div class="flex gap-6 mt-10 pt-4 border-t border-stone-200/70">
+                            <div>
+                                <span class="block text-xl font-bold text-stone-800">150+</span>
+                                <span class="text-xs text-stone-500">curated looks</span>
+                            </div>
+                            <div>
+                                <span class="block text-xl font-bold text-stone-800">24/7</span>
+                                <span class="text-xs text-stone-500">style support</span>
+                            </div>
+                            <div>
+                                <span class="block text-xl font-bold text-stone-800">♻️</span>
+                                <span class="text-xs text-stone-500">eco fabric</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RIGHT SIDE: HERO MAN IMAGE -->
+                <div class="lg:w-1/2 relative bg-[#2e2a24] min-h-[400px] md:min-h-[550px] flex items-center justify-center overflow-hidden">
+                    <img src="man.png" alt="Urbané man - modern elegance" class="absolute inset-0 w-full h-full object-cover object-top lg:object-center transition duration-700 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10 pointer-events-none"></div>
+                    <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-md text-xs font-semibold text-stone-800 z-10">
+                        New SS24 Collection
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- GALLERY SECTION (Second Section) — 8 IMAGES including pinkish.jpg -->
+        <div class="bg-[#FCF9F5] px-6 md:px-10 py-16 md:py-20">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-stone-400 text-sm font-medium tracking-wider uppercase bg-stone-100 px-4 py-1.5 rounded-full inline-block">curated gallery</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mt-4 mb-3 tracking-tight">the art of urban detail</h2>
+                <p class="text-stone-500 max-w-xl mx-auto text-base">Explore timeless pieces, each telling a story of craftsmanship and modern comfort — the new season essentials.</p>
+            </div>
+            
+            <!-- 8-image grid: 4 columns on desktop, 2 on tablet, 1 on mobile -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 auto-rows-min">
+                
+                <!-- Card 1: orangi.jpg -->
+                <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-72 bg-stone-100">
+                        <img src="orangi.jpg" alt="Urbané orange collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-0.5 rounded-full text-[11px] font-semibold text-stone-700">New</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-stone-800 text-lg">Sunset knit</h3>
+                        <p class="text-stone-500 text-sm mt-1">relaxed silhouette, organic cotton</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-stone-800">$129</span>
+                            <span class="text-stone-400 text-xs uppercase tracking-wide">shop →</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2: yellow.jpg -->
+                <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-72 bg-stone-100">
+                        <img src="yellow.jpg" alt="Mustard yellow coat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-stone-800 text-lg">Golden hour</h3>
+                        <p class="text-stone-500 text-sm mt-1">oversized blazer, linen blend</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-stone-800">$189</span>
+                            <span class="text-stone-400 text-xs uppercase tracking-wide">shop →</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3: haew.jpg -->
+                <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-72 bg-stone-100">
+                        <img src="haew.jpg" alt="Haew streetwear style" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded-full">limited</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-stone-800 text-lg">urban cargo</h3>
+                        <p class="text-stone-500 text-sm mt-1">functional pockets, relaxed fit</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-stone-800">$149</span>
+                            <span class="text-stone-400 text-xs uppercase tracking-wide">shop →</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4: hoodie.jpg (bestseller) -->
+                <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-72 bg-stone-100">
+                        <img src="hoodie.jpg" alt="Premium hoodie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute top-3 left-3 bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded-full">bestseller</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-stone-800 text-lg">signature hoodie</h3>
+                        <p class="text-stone-500 text-sm">premium french terry, relaxed hood</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-stone-800">$159</span>
+                            <span class="text-stone-400 text-xs uppercase tracking-wide">shop →</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 5: omo.jpg -->
+                <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-72 bg-stone-100">
+                        <img src="omo.jpg" alt="Omo essential" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-stone-800 text-lg">silk blend shirt</h3>
+                        <p class="text-stone-500 text-sm mt-1">elevated everyday staple</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-stone-800">$199</span>
+                            <span class="text-stone-400 text-xs uppercase tracking-wide">shop →</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 6: blue.jpg -->
+                <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-72 bg-stone-100">
+                        <img src="blue.jpg" alt="Deep blue denim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-stone-800 text-lg">indigo wash</h3>
+                        <p class="text-stone-500 text-sm mt-1">selvedge denim jacket</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-stone-800">$219</span>
+                            <span class="text-stone-400 text-xs uppercase tracking-wide">shop →</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 7: blackish.jpg -->
+                <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-72 bg-stone-100">
+                        <img src="blackish.jpg" alt="Black essential" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-2 right-2 bg-stone-800/80 text-white text-[10px] px-2 py-0.5 rounded-full">-20%</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-stone-800 text-lg">nightfall coat</h3>
+                        <p class="text-stone-500 text-sm mt-1">wool cashmere blend</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-stone-800">$279</span>
+                            <span class="text-stone-400 text-xs line-through decoration-stone-400">$349</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 8: pinkish.jpg (NEW IMAGE) -->
+                <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-72 bg-stone-100">
+                        <img src="pinkish.jpg" alt="Pinkish dream coat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3 bg-pink-100 text-pink-700 text-[10px] font-semibold px-2 py-0.5 rounded-full">just dropped</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-stone-800 text-lg">rose quartz</h3>
+                        <p class="text-stone-500 text-sm mt-1">blush wool blend, soft tailoring</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="font-bold text-stone-800">$239</span>
+                            <span class="text-stone-400 text-xs uppercase tracking-wide">shop →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- gallery footer -->
+            <div class="text-center mt-16">
+                <a href="#" class="inline-flex items-center gap-2 text-stone-700 border-b border-stone-300 pb-1 font-medium hover:border-stone-800 transition-all group">
+                    discover full collection
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- footer -->
+        <div class="bg-white/80 border-t border-stone-100 px-8 py-6 flex flex-wrap justify-between items-center gap-4 text-sm text-stone-500">
+            <div class="flex gap-6">
+                <span>© Urbané — mindful fashion</span>
+                <span>·</span>
+                <span>sustainable luxury</span>
+            </div>
+            <div class="flex gap-5">
+                <span class="hover:text-stone-800 cursor-pointer">Instagram</span>
+                <span class="hover:text-stone-800 cursor-pointer">Pinterest</span>
+                <span class="hover:text-stone-800 cursor-pointer">Journal</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
